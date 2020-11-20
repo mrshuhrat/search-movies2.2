@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeastMovies.uz</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ 
+  <div class="container pt-3 position-relative">
+    <header class="site-header">
+      <h1 class="text-center mb-4">Best Movies</h1>
+
+      <form class="d-flex" action="https://echo.html.ru" method="GET" autocomplete="off">
+        <div class="form-group d-flex w-75 mr-5">
+          <input class="search-input form-control w-100 mr-3" type="search" name="search" id="movies-search" placeholder="Search...">
+          <button class="search-button btn bg-danger text-white" type="button">Search</button>
+        </div>
+  
+        <select class="form-control w-25 mr-5" name="select" id="categories-select"></select>
+  
+        <select class="form-control w-25  " name="rating" id="rating-select"></select>
+      </form>
+    </header>
+    <hr>
+
+    <main class="">
+      <ul class="movies p-3 d-flex flex-wrap  list-unstyled">
+        
+      </ul>
+    </main>
+  </div>
+
+  <template id="movie_template">
+    <li class="movie d-flex flex-column p-2 mb-5 border shadow">
+      <img class="movie__img mb-2" src="" alt="movies img" width="220" height="150px">
+      <h2 class="movie__title m-0 h5 font-weight-bold text-center"></h2>
+      <p class="movie__categories text-center m-0 font-italic"></p>
+      <div class="d-flex align-items-center justify-content-center mb-3">
+        <span class="star">&starf;</span>
+        <span class="movie__rating font-weight-bold"></span>
+      </div>
+      <button class="movie__btn btn bg-danger mt-auto d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
+    </li>
+  </template>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bu qism tezkunda tayyor bo'ladi :)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/movies.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
