@@ -17,6 +17,7 @@ var select = ['Alphabet (A-Z)', 'Alphabet (Z-A)', 'Rating (1-10)', 'Rating (10-1
 var categories = [];
 
 var elMoviesWrapper = $_('.movies');
+var elSearchForm = $_('.search-form');
 var elSearchInput = $_('.search-input');
 var elSearchButton = $_('.search-button');
 var elCategoriesSelect = $_('.catigories-select');
@@ -111,5 +112,8 @@ newOptionSelect.disabled = true;
 
 elSortSelect.appendChild(newOptionSelect);
 
+elSearchForm.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+})
 elSearchInput.addEventListener('input', searchMovie);
-elSearchButton.addEventListener('click', searchMovie);
+elSearchButton.addEventListener('submit', searchMovie);
