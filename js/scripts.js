@@ -1,3 +1,4 @@
+
 var normalizedMovies = movies.map(function (movie, i) {
   return {
     id: i,
@@ -12,7 +13,6 @@ var normalizedMovies = movies.map(function (movie, i) {
     traillerLink: `https://www.youtube.com/watch?v=${movie.ytid}`
   };
 }).slice(0, 300);
-
 
 var select = ['Alphabet (A-Z)', 'Alphabet (Z-A)', 'Rating (1-10)', 'Rating (10-1)']
 var categories = [];
@@ -38,9 +38,10 @@ var createMoviesElement = function (movie) {
   return elNewMovies;
 }
 
-var renderMovies = function (normalizedMovies) {
 
+var renderMovies = function (normalizedMovies) {
   elMoviesWrapper.innerHTML = '';
+
   var elMoviesWrapperFragment = document.createDocumentFragment();
 
   normalizedMovies.forEach(function (movie) {
@@ -53,7 +54,6 @@ renderMovies(normalizedMovies);
 
 
 var searchMovie = function () {
-
   var searchWord = elSearchInput.value.trim();
   var searchRegex = new RegExp(searchWord, 'gi');
   var newResult = [];
@@ -82,13 +82,13 @@ var getCategories = function(normalizedMovies) {
   });
   return categories;
 };
-
 getCategories(normalizedMovies);
 
 var newOptionCategories = document.createElement('option');
 newOptionCategories.textContent = 'All';
 newOptionCategories.selected = true;
 elCategoriesSelect.appendChild(newOptionCategories);
+
 
 for (var category of categories) {
   var newOption = document.createElement('option');
@@ -99,7 +99,6 @@ for (var category of categories) {
 }
 
 
-
 for (var sort of select) {
   var newOption = document.createElement('option');
   newOption.textContent = sort;
@@ -107,27 +106,16 @@ for (var sort of select) {
 
   elSortSelect.appendChild(newOption)
 }
+
 var newOptionSelect = document.createElement('option');
 newOptionSelect.textContent = 'Select'
 newOptionSelect.selected = true;
 newOptionSelect.disabled = true;
-
 elSortSelect.appendChild(newOptionSelect);
+
 
 elSearchForm.addEventListener('submit', function (evt) {
   evt.preventDefault();
 })
 elSearchInput.addEventListener('input', searchMovie);
 elSearchButton.addEventListener('submit', searchMovie);
-
-
-var moviesbyCategory = function (movie) {
-  if (elCategoriesSelect.value === 'All') {
-    getCategories(normalizedMovies);
-    return;
-  }
-
-  
-}
-
-moviesbyCategory(normalizedMovies);
