@@ -12,7 +12,7 @@ var normalizedMovies = movies.map(function (movie, i) {
     language: movie.language,
     traillerLink: `https://www.youtube.com/watch?v=${movie.ytid}`
   };
-}).slice(0, 300);
+}).slice(0, 250);
 
 var select = ['Alphabet (A-Z)', 'Alphabet (Z-A)', 'Rating (1-10)', 'Rating (10-1)']
 var categories = [];
