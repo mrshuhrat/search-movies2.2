@@ -58,7 +58,7 @@ var searchMovie = function () {
   var searchRegex = new RegExp(searchWord, 'gi');
   var newResult = [];
 
-  var createMoviesBySearch = normalizedMovies.filter(function(movie) {
+  var createMoviesBySearch = normalizedMovies.filter(function (movie) {
     var result = movie.title.match(searchRegex);
     
     if (result) {
@@ -114,8 +114,25 @@ newOptionSelect.disabled = true;
 elSortSelect.appendChild(newOptionSelect);
 
 
+elCategoriesSelect.addEventListener('change', function () {
+  var categoryMovie = [];
+  categoryMovie = normalizedMovies.filter(function (movie) {
+    if (elCategoriesSelect.value === 'All') {
+      return movie;
+    };
+  
+    var film = movie.categories.includes(elCategoriesSelect.value);
+    return film;
+  });
+  
+  renderMovies(categoryMovie);
+});
+
+
+
 elSearchForm.addEventListener('submit', function (evt) {
   evt.preventDefault();
 })
 elSearchInput.addEventListener('input', searchMovie);
 elSearchButton.addEventListener('submit', searchMovie);
+elCategoriesSelect.addEventListener('change', categoryMovie)
