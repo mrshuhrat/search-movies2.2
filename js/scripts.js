@@ -106,7 +106,6 @@ for (var sort of select) {
 
   elSortSelect.appendChild(newOption)
 }
-
 var newOptionSelect = document.createElement('option');
 newOptionSelect.textContent = 'Select'
 newOptionSelect.selected = true;
@@ -129,7 +128,48 @@ elCategoriesSelect.addEventListener('change', function () {
 });
 
 
+var normalizedMoviesCopy = normalizedMovies.slice();
+elSortSelect.addEventListener('change', function () {
+  if (elSortSelect.value === 'Alphabet (A-Z)') {
+    normalizedMoviesCopy.sort(function (a, b) {
+      var atitle = a.title, btitle = b.title;
+      if (atitle < btitle) {
+        return -1;
+      };
+      return 0;
+    });
+    renderMovies(normalizedMoviesCopy);
+  }
 
+  if (elSortSelect.value === 'Alphabet (Z-A)') {
+    normalizedMoviesCopy.sort(function (a, b) {
+      var atitle = a.title, btitle = b.title;
+      if (atitle > btitle) {
+        return -1;
+      };
+      return 0;
+    });
+    renderMovies(normalizedMoviesCopy);
+  }
+
+  if (elSortSelect.value === 'Rating (1-10)') {
+    normalizedMoviesCopy.sort(function (a, b) {
+      return a.imdbRating - b.imdbRating;
+    });
+    renderMovies(normalizedMoviesCopy);
+  }
+
+  if (elSortSelect.value === 'Rating (10-1)') {
+    normalizedMoviesCopy.sort(function (a, b) {
+      return b.imdbRating - a.imdbRating;
+    });
+    renderMovies(normalizedMoviesCopy);
+  }
+
+  return 0;
+
+  renderMovies(normalizedMoviesCopy);
+})
 elSearchForm.addEventListener('submit', function (evt) {
   evt.preventDefault();
 })
