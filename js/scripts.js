@@ -13,8 +13,10 @@ var normalizedMovies = movies.map(function (movie, i) {
   };
 }).slice(0, 300);
 
+
 var select = ['Alphabet (A-Z)', 'Alphabet (Z-A)', 'Rating (1-10)', 'Rating (10-1)']
 var categories = [];
+
 
 var elMoviesWrapper = $_('.movies');
 var elSearchForm = $_('.search-form');
@@ -23,6 +25,7 @@ var elSearchButton = $_('.search-button');
 var elCategoriesSelect = $_('.catigories-select');
 var elSortSelect = $_('.sort-selct');
 var elMoviesTemplate = $_('#movie_template').content;
+
 
 var createMoviesElement = function (movie) {
   var elNewMovies = elMoviesTemplate.cloneNode(true);
@@ -67,7 +70,7 @@ var searchMovie = function () {
 }
 
 
-const getCategories = function(normalizedMovies) {
+var getCategories = function(normalizedMovies) {
   categories.push(normalizedMovies[0].categories[0]);
 
   normalizedMovies.forEach(function(movie) {
@@ -82,6 +85,10 @@ const getCategories = function(normalizedMovies) {
 
 getCategories(normalizedMovies);
 
+var newOptionCategories = document.createElement('option');
+newOptionCategories.textContent = 'All';
+newOptionCategories.selected = true;
+elCategoriesSelect.appendChild(newOptionCategories);
 
 for (var category of categories) {
   var newOption = document.createElement('option');
@@ -90,12 +97,7 @@ for (var category of categories) {
 
   elCategoriesSelect.appendChild(newOption);
 }
-var newOptionCategories = document.createElement('option');
-newOptionCategories.textContent = 'Categories';
-newOptionCategories.selected = true;
-newOptionCategories.disabled = true;
 
-elCategoriesSelect.appendChild(newOptionCategories);
 
 
 for (var sort of select) {
@@ -117,3 +119,15 @@ elSearchForm.addEventListener('submit', function (evt) {
 })
 elSearchInput.addEventListener('input', searchMovie);
 elSearchButton.addEventListener('submit', searchMovie);
+
+
+var moviesbyCategory = function (movie) {
+  if (elCategoriesSelect.value === 'All') {
+    getCategories(normalizedMovies);
+    return;
+  }
+
+  
+}
+
+moviesbyCategory(normalizedMovies);
