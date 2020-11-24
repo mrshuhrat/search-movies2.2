@@ -14,32 +14,34 @@
     <header class="site-header">
       <h1 class="text-center mb-4">Best Movies</h1>
 
-      <form class="search-form d-flex" action="https://echo.html.ru" method="GET" autocomplete="off">
-        <div class="form-group d-flex w-75 mr-5">
-          <input class="search-input form-control w-100 mr-3" type="search" name="search" id="movies-search" placeholder="Search...">
+      <form class="search-form" action="https://echo.html.ru" method="GET" autocomplete="off">
+        <div class="saerch-wrapper">
+          <input class="search-input form-control" type="search" name="search" id="movies-search" placeholder="Search...">
           <button class="search-button btn bg-danger text-white" type="button">Search</button>
         </div>
   
-        <select class="catigories-select form-control w-25 mr-5" name="select" id="categories-select">
-          <option value="All" selected>All</option>
-        </select>
-  
-        <select class="sort-selct form-control w-25  " name="rating" id="rating-select">
-          <option value="Select" selected disabled>Select</option>
-        </select>
+        <div class="selct-wrapper d-flex">
+          <select class="catigories-select form-control" name="select" id="categories-select">
+            <option value="All" selected>All</option>
+          </select>
+    
+          <select class="sort-selct form-control" name="rating" id="rating-select">
+            <option value="Select" selected disabled>Select</option>
+          </select>
+        </div>
       </form>
     </header>
     <hr>
 
     <main class="">
-      <ul class="movies p-3 d-flex flex-wrap  list-unstyled">
+      <ul class="movies p-2 d-flex flex-wrap  list-unstyled">
         
       </ul>
     </main>
   </div>
 
   <template id="movie_template">
-    <li class="movie d-flex flex-column p-2 mb-5 border shadow">
+    <li class="movie d-flex flex-column p-3 mb-5 border shadow">
       <img class="movie__img mb-2" src="" alt="movies img" width="220" height="150px">
       <h2 class="movie__title m-0 h5 font-weight-bold text-center"></h2>
       <p class="movie__categories text-center m-0 font-italic"></p>

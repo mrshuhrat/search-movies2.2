@@ -23,6 +23,28 @@ h1 {
   font-weight: bold;
 }
 
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saerch-wrapper {
+  display: flex;
+  width: 50%;
+}
+
+.search-input {
+  margin-right: 20px;
+}
+
+.search-button {
+  height: 38px;
+}
+
+.catigories-select {
+  margin-right: 25px;
+}
+
 .movies {
   overflow: auto;
   margin-right: -35px;
@@ -63,4 +85,53 @@ h1 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+@media only screen and (max-width: 1200px) {
+  .movies {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .search-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .saerch-wrapper {
+    display: flex;
+    margin-bottom: 18px;
+    width: 100%;
+  }
+
+  .movies {
+    overflow: visible;
+    margin-right: -35px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .movies {
+    overflow: visible;
+    margin-right: 0;
+    height: 100%;
+  }
+
+  .movie {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .selct-wrapper {
+    flex-direction: column;
+  }
+
+  .catigories-select {
+    margin-bottom: 18px;
+  }
 }

@@ -150,4 +150,4 @@ elSearchForm.addEventListener('submit', function (evt) {
 })
 elSearchInput.addEventListener('input', searchMovie);
 elSearchButton.addEventListener('submit', searchMovie);
-elCategoriesSelect.addEventListener('change', categoryMovie)
+// elCategoriesSelect.addEventListener('change', categoryMovie);
