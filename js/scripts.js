@@ -84,11 +84,6 @@ var getCategories = function(normalizedMovies) {
 };
 getCategories(normalizedMovies);
 
-var newOptionCategories = document.createElement('option');
-newOptionCategories.textContent = 'All';
-newOptionCategories.selected = true;
-elCategoriesSelect.appendChild(newOptionCategories);
-
 
 for (var category of categories) {
   var newOption = document.createElement('option');
@@ -106,11 +101,6 @@ for (var sort of select) {
 
   elSortSelect.appendChild(newOption)
 }
-var newOptionSelect = document.createElement('option');
-newOptionSelect.textContent = 'Select'
-newOptionSelect.selected = true;
-newOptionSelect.disabled = true;
-elSortSelect.appendChild(newOptionSelect);
 
 
 elCategoriesSelect.addEventListener('change', function () {
