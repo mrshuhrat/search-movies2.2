@@ -138,3 +138,13 @@ elSearchForm.addEventListener('submit', (evt) => {
 
   renderMovies(searchResults, movieTitleRegex);
 });
+
+var searchTitle = elSearchInput.value.trim();
+var movieTitleRegex = new RegExp(searchTitle, 'gi');
+var genre = elCategoriesSelect.value;
+var sorting = elSortSelect.value;
+
+var searchResults = findMovies(movieTitleRegex, genre);
+var test = sortSearchResults(searchResults, sorting);
+console.log(test);
+renderMovies(searchResults, movieTitleRegex);

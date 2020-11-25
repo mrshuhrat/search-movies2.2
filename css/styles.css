@@ -25,29 +25,27 @@ h1 {
 
 .search-form {
   display: flex;
-  justify-content: space-between;
 }
 
 .saerch-wrapper {
-  display: flex;
-  width: 50%;
+  display: inline-flex;
 }
 
 .search-input {
   margin-right: 20px;
 }
 
-.search-button {
-  height: 38px;
-}
-
 .catigories-select {
   margin-right: 25px;
 }
 
+.search-button {
+  height: 38px;
+}
+
 .movies {
   overflow: auto;
-  margin-right: -35px;
+  margin-right: -30px;
   height: 430px;
 }
 

@@ -14,18 +14,14 @@
     <header class="site-header">
       <h1 class="text-center mb-4">Best Movies</h1>
 
-      <form class="search-form" action="https://echo.html.ru" method="GET" autocomplete="off">
-        <div class="saerch-wrapper">
+      <form class="search-form mb-4" action="https://echo.html.ru" method="GET" autocomplete="off">
           <input class="search-input form-control" type="search" name="search" id="movies-search" placeholder="Search...">
-          <button class="search-button btn bg-danger text-white" type="submit">Search</button>
-        </div>
-  
-        <div class="selct-wrapper d-flex">
-          <select class="catigories-select form-control" name="select" id="categories-select">
+          
+          <select class="catigories-select form-control w-25" name="select" id="categories-select">
             <option value="All" selected>All</option>
           </select>
     
-          <select class="sort-selct form-control" name="rating" id="rating-select">
+          <select class="sort-selct form-control mr-3 w-25" name="rating" id="rating-select">
             <option value="az">Alphabet (A-Z)</option>
             <option value="za">Alphabet (Z-A)</option>
             <option value="rating_asc">Rating (1-10)</option>
@@ -33,13 +29,15 @@
             <option value="year_asc">Year (Old to New)</option>
             <option value="year_desc">Year (New to Old)</option>
           </select>
-        </div>
+
+          <button class="search-button btn bg-danger text-white" type="submit">Search</button>
+        
       </form>
     </header>
     <hr>
 
     <main class="">
-      <ul class="movies p-2 d-flex flex-wrap  list-unstyled">
+      <ul class="movies p-3 d-flex flex-wrap  list-unstyled">
         
       </ul>
     </main>
