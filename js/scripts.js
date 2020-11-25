@@ -79,15 +79,6 @@ for (var category of categories) {
 }
 
 
-for (var sort of select) {
-  var newOption = document.createElement('option');
-  newOption.textContent = sort;
-  newOption.value = sort;
-
-  elSortSelect.appendChild(newOption)
-}
-
-
 elCategoriesSelect.addEventListener('change', function () {
   var categoryMovie = [];
   categoryMovie = normalizedMovies.filter(function (movie) {
@@ -105,7 +96,7 @@ elCategoriesSelect.addEventListener('change', function () {
 
 var normalizedMoviesCopy = normalizedMovies.slice();
 elSortSelect.addEventListener('change', function () {
-  if (elSortSelect.value === 'Alphabet (A-Z)') {
+  if (elSortSelect.value === 'az') {
     normalizedMoviesCopy.sort(function (a, b) {
       var atitle = a.title, btitle = b.title;
       if (atitle < btitle) {
@@ -116,7 +107,7 @@ elSortSelect.addEventListener('change', function () {
     renderMovies(normalizedMoviesCopy);
   }
 
-  if (elSortSelect.value === 'Alphabet (Z-A)') {
+  if (elSortSelect.value === 'za') {
     normalizedMoviesCopy.sort(function (a, b) {
       var atitle = a.title, btitle = b.title;
       if (atitle > btitle) {
@@ -127,14 +118,14 @@ elSortSelect.addEventListener('change', function () {
     renderMovies(normalizedMoviesCopy);
   }
 
-  if (elSortSelect.value === 'Rating (1-10)') {
+  if (elSortSelect.value === 'rating_asc') {
     normalizedMoviesCopy.sort(function (a, b) {
       return a.imdbRating - b.imdbRating;
     });
     renderMovies(normalizedMoviesCopy);
   }
 
-  if (elSortSelect.value === 'Rating (10-1)') {
+  if (elSortSelect.value === 'rating_desc') {
     normalizedMoviesCopy.sort(function (a, b) {
       return b.imdbRating - a.imdbRating;
     });

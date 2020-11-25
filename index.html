@@ -26,7 +26,12 @@
           </select>
     
           <select class="sort-selct form-control" name="rating" id="rating-select">
-            <option value="Select" selected disabled>Select</option>
+            <option value="az">Alphabet (A-Z)</option>
+            <option value="za">Alphabet (Z-A)</option>
+            <option value="rating_asc">Rating (1-10)</option>
+            <option value="rating_desc">Rating (10-1)</option>
+            <option value="year_asc">Year (Old to New)</option>
+            <option value="year_desc">Year (New to Old)</option>
           </select>
         </div>
       </form>
@@ -39,19 +44,6 @@
       </ul>
     </main>
   </div>
-
-  <template id="movie_template">
-    <li class="movie d-flex flex-column p-3 mb-5 border shadow">
-      <img class="movie__img mb-2" src="" alt="movies img" width="220" height="150px">
-      <h2 class="movie__title m-0 h5 font-weight-bold text-center"></h2>
-      <p class="movie__categories text-center m-0 font-italic"></p>
-      <div class="d-flex align-items-center justify-content-center mb-3">
-        <span class="star">&starf;</span>
-        <span class="movie__rating font-weight-bold"></span>
-      </div>
-      <button class="movie__btn btn bg-danger mt-auto d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
-    </li>
-  </template>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -68,6 +60,19 @@
       </div>
     </div>
   </div>
+
+  <template id="movie_template">
+    <li class="movie d-flex flex-column p-3 mb-5 border shadow">
+      <img class="movie__img mb-2" src="" alt="movies img" width="220" height="150px">
+      <h2 class="movie__title m-0 h5 font-weight-bold text-center"></h2>
+      <p class="movie__categories text-center m-0 font-italic"></p>
+      <div class="d-flex align-items-center justify-content-center mb-3">
+        <span class="star">&starf;</span>
+        <span class="movie__rating font-weight-bold"></span>
+      </div>
+      <button class="movie__btn btn bg-danger mt-auto d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
+    </li>
+  </template>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
