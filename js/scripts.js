@@ -2,13 +2,12 @@ var normalizedMovies = normalizedMovies.slice(0, 200);
 
 var elSearchForm = $_('.search-form');
 var elSearchInput = $_('.search-input', elSearchForm);
-var elSearchButton = $_('.search-button', elSearchForm);
 var elCategoriesSelect = $_('.catigories-select', elSearchForm);
 var elSortSelect = $_('.sort-selct', elSearchForm);
-var elMoviesTemplate = $_('#movie_template').content;
 
 var elMoviesWrapper = $_('.movies');
 
+var elMoviesTemplate = $_('#movie_template').content;
 
 var getCategories = function() {
   var categories = [];
@@ -38,12 +37,12 @@ var getCategories = function() {
 getCategories();
 
 
-var renderMovies = function (searchResult, searchRegex) {
+var renderMovies = function (searchResults, searchRegex) {
   elMoviesWrapper.innerHTML = '';
 
   var elMoviesWrapperFragment = document.createDocumentFragment();
 
-  searchResult.forEach(function (movie) {
+  searchResults.forEach(function (movie) {
     var elMovie = elMoviesTemplate.cloneNode(true);
 
     $_('.movie__img', elMovie).src = movie.smallPoster;
@@ -115,11 +114,11 @@ var sortSearchResults = function (results, sortType) {
 };
 
 
-var findMovies = function (title, minRating, genre) {
+var findMovies = function (title, genre) {
   return normalizedMovies.filter((movie) => {
     var doesMatchCategory = genre === 'All' || movie.categories.includes(genre);
 
-    return movie.title.match(title) && movie.imdbRating >= minRating && doesMatchCategory;
+    return movie.title.match(title) && movie.imdbRating && doesMatchCategory;
   });
 };
 
@@ -130,12 +129,12 @@ elSearchForm.addEventListener('submit', (evt) => {
 
   var searchTitle = elSearchInput.value.trim();
   var movieTitleRegex = new RegExp(searchTitle, 'gi');
-  // var minimumRating = Number(elSearchRatingInput.value);
   var genre = elCategoriesSelect.value;
   var sorting = elSortSelect.value;
 
-  var searchResults = findMovies(movieTitleRegex, /* minimumRating, */ genre);
+  var searchResults = findMovies(movieTitleRegex, genre);
   var test = sortSearchResults(searchResults, sorting);
+  console.log(test);
 
   renderMovies(searchResults, movieTitleRegex);
 });
