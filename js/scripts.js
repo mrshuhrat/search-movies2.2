@@ -1,41 +1,73 @@
-
 var normalizedMovies = normalizedMovies.slice(0, 200);
-var select = ['Alphabet (A-Z)', 'Alphabet (Z-A)', 'Rating (1-10)', 'Rating (10-1)']
-var categories = [];
 
-var elMoviesWrapper = $_('.movies');
 var elSearchForm = $_('.search-form');
-var elSearchInput = $_('.search-input');
-var elSearchButton = $_('.search-button');
-var elCategoriesSelect = $_('.catigories-select');
-var elSortSelect = $_('.sort-selct');
+var elSearchInput = $_('.search-input', elSearchForm);
+var elSearchButton = $_('.search-button', elSearchForm);
+var elCategoriesSelect = $_('.catigories-select', elSearchForm);
+var elSortSelect = $_('.sort-selct', elSearchForm);
 var elMoviesTemplate = $_('#movie_template').content;
 
-
-// Create Element Function
-var createMoviesElement = function (movie) {
-  var elNewMovies = elMoviesTemplate.cloneNode(true);
-
-  elNewMovies.querySelector('.movie__img').src = movie.smallPoster;
-  elNewMovies.querySelector('.movie__title').textContent = movie.title;
-  elNewMovies.querySelector('.movie__categories').textContent = movie.categories.join(', ');
-  elNewMovies.querySelector('.movie__rating').textContent = movie.imdbRating;
-
-  return elNewMovies;
-}
+var elMoviesWrapper = $_('.movies');
 
 
-var renderMovies = function (normalizedMovies) {
+var getCategories = function() {
+  var categories = [];
+
+  normalizedMovies.forEach(function(movie) {
+    movie.categories.forEach(function(category) {
+      if (!(categories.includes(category))) {
+        categories.push(category);
+      }
+    });
+  });
+
+  categories.sort();
+
+  var elOptionFragment = document.createDocumentFragment();
+
+  categories.forEach(function (category) {
+    var elCategoryOption = createElement('option', '', category)
+    elCategoryOption.value = category;
+
+    elOptionFragment.appendChild(elCategoryOption);
+  });
+
+  elCategoriesSelect.appendChild(elOptionFragment);
+};
+
+getCategories();
+
+
+var renderMovies = function (searchResult, searchRegex) {
   elMoviesWrapper.innerHTML = '';
 
   var elMoviesWrapperFragment = document.createDocumentFragment();
 
-  normalizedMovies.forEach(function (movie) {
-    elMoviesWrapperFragment.appendChild(createMoviesElement(movie));
+  searchResult.forEach(function (movie) {
+    var elMovie = elMoviesTemplate.cloneNode(true);
+
+    $_('.movie__img', elMovie).src = movie.smallPoster;
+
+    if (searchRegex.source === '(?:)') {
+      $_('.movie__title', elMovie).textContent = movie.title;
+    } else {
+      $_('.movie__title', elMovie).innerHTML = movie.title.replace(searchRegex, `<mark class="px-0">${movie.title.match(searchRegex)}</mark>`);
+    }
+
+    $_('.movie__categories', elMovie).textContent = movie.categories.join(', ');
+    $_('.movie__rating', elMovie).textContent = movie.imdbRating;
+
+    elMoviesWrapperFragment.appendChild(elMovie);
   });
-  elMoviesWrapper.appendChild(elMoviesWrapperFragment);
+
+  elMoviesWrapper.appendChild(elMoviesWrapperFragment)
 };
-renderMovies(normalizedMovies);
+
+
+
+
+
+
 
 
 var searchMovie = function () {
@@ -52,30 +84,6 @@ var searchMovie = function () {
   });
 
   renderMovies(newResult);
-}
-
-
-var getCategories = function(normalizedMovies) {
-  categories.push(normalizedMovies[0].categories[0]);
-
-  normalizedMovies.forEach(function(movie) {
-    movie.categories.forEach(function(category) {
-      if (!(categories.includes(category))) {
-        categories.push(category);
-      }
-    });
-  });
-  return categories;
-};
-getCategories(normalizedMovies);
-
-
-for (var category of categories) {
-  var newOption = document.createElement('option');
-  newOption.textContent = category;
-  newOption.value = category;
-
-  elCategoriesSelect.appendChild(newOption);
 }
 
 
