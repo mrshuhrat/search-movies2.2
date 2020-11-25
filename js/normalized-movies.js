@@ -31,44 +31,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/jwD04NsnLLg/hqdefault.jpg"
   },
   {
-    "title": "Mickey's Magical Christmas: Snowed in at the House of Mouse",
-    "year": 2001,
-    "categories": [
-      "Adventure",
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "summary": "After everyone is snowed in at the House of Mouse, Mickey suggests they throw their own Christmas party. Everyone is happy, except for Donald who just isn't in to the Christmas spirit. So Mickey shows a series of cartoons that show just what Christmas is all about. It features a star studded cast of Disney characters from everyone's favorite animated Disney movies.",
-    "imdbId": "tt0300195",
-    "imdbRating": 6.8,
-    "runtime": 65,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=uCKwHHftrU4",
-    "bigPoster": "http://i3.ytimg.com/vi/uCKwHHftrU4/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/uCKwHHftrU4/hqdefault.jpg"
-  },
-  {
-    "title": "Mickey's House of Villains",
-    "year": 2001,
-    "categories": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy",
-      "Horror"
-    ],
-    "summary": "The villains from the popular animated Disney films are gathered at the House of Mouse with plans to take over. Soon, the villains take over the house and kick out Mickey, Donald and Goofy. It's all up to Mickey and his friends to overthrow evil and return the House of Mouse to normal--or as close to normal as it get's.",
-    "imdbId": "tt0329374",
-    "imdbRating": 6.6,
-    "runtime": 0,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=JA03ciYt-Ek",
-    "bigPoster": "http://i3.ytimg.com/vi/JA03ciYt-Ek/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/JA03ciYt-Ek/hqdefault.jpg"
-  },
-  {
     "title": "And Then I Go",
     "year": 2017,
     "categories": [
@@ -227,22 +189,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=eMVw1pHVMAw",
     "bigPoster": "http://i3.ytimg.com/vi/eMVw1pHVMAw/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/eMVw1pHVMAw/hqdefault.jpg"
-  },
-  {
-    "title": "Silent Night",
-    "year": 2017,
-    "categories": [
-      "Comedy",
-      "Drama"
-    ],
-    "summary": "Adam unexpectedly visits his family house at Christmas after a few years of working abroad. No family member knows about his secret plans and the real reasons of his visit.",
-    "imdbId": "tt7133554",
-    "imdbRating": 7.5,
-    "runtime": 100,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=cA6BUYVkQoE",
-    "bigPoster": "http://i3.ytimg.com/vi/cA6BUYVkQoE/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/cA6BUYVkQoE/hqdefault.jpg"
   },
   {
     "title": "Suicide Squad: Hell to Pay",
@@ -736,25 +682,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/quzIsJq7t08/hqdefault.jpg"
   },
   {
-    "title": "Trouble Is My Business",
-    "year": 2018,
-    "categories": [
-      "Action",
-      "Adventure",
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "summary": "Los Angeles in 1947, everything should be sunny, but the smog creates a fog, a haze that permeates not just the lungs, but the psyches. Private eye Roland Drake cracks cases and romances femme fatales, while corrupt cops rule the underworld of the city and moral lines are anything but black and white. A dark, hard-boiled tale of love and betrayal, told in the classic style of film noir. Drake has fallen on hard times in a harsh world. He has been evicted from his office and disgraced by a missing persons case. Ruined in the public eye and with the police. it seems like it's all over for Roland Drake. Then, redemption walks in - with curves. The owner of those curves is a sexy, dark haired beauty named Katherine Montemar. She wants his help. The chemistry is immediate and her concern for the disappearance of her family members pulls him into her case - and into bed. He wakes up to her missing too, and a pool of blood where she used to be. After a nervous encounter with the equally ...",
-    "imdbId": "tt2243900",
-    "imdbRating": 6.1,
-    "runtime": 116,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=SqUEOsQf6hM",
-    "bigPoster": "http://i3.ytimg.com/vi/SqUEOsQf6hM/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/SqUEOsQf6hM/hqdefault.jpg"
-  },
-  {
     "title": "Outside In",
     "year": 2017,
     "categories": [
@@ -987,21 +914,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/uxM6vsMNwXs/hqdefault.jpg"
   },
   {
-    "title": "A Moving Romance",
-    "year": 2017,
-    "categories": [
-      "Family"
-    ],
-    "summary": "Interior designer Olivia Wilson loses her job in New York. With newfound time on her hands she decides to head home to California to surprise her dad, Neil for the 25th anniversary of the family business, Wilson Family Movers. Upon arrival she meets the newest member of the Wilson team, Scott. With business coming to a halt, she and Scott work together to get things back on track. Just as the two begin to form a bond, Olivia is faced with a difficult decision when a worthwhile job opportunity pops up back in New York.",
-    "imdbId": "tt5039242",
-    "imdbRating": 6.1,
-    "runtime": 90,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=",
-    "bigPoster": "http://i3.ytimg.com/vi//maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi//hqdefault.jpg"
-  },
-  {
     "title": "Happy End",
     "year": 2017,
     "categories": [
@@ -1131,22 +1043,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/Plr3V4TYBQE/hqdefault.jpg"
   },
   {
-    "title": "The Coming Days",
-    "year": 2010,
-    "categories": [
-      "Drama",
-      "Sci-Fi"
-    ],
-    "summary": "In the near future the dreams of three adult siblings living in Germany are fractured by difficult romantic relationships and the unwitting involvement with an underground organization through a growing worldwide panic over the few remaining oil fields in Asia.",
-    "imdbId": "tt1545985",
-    "imdbRating": 6.3,
-    "runtime": 125,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=",
-    "bigPoster": "http://i3.ytimg.com/vi//maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi//hqdefault.jpg"
-  },
-  {
     "title": "Ichi the Killer",
     "year": 2001,
     "categories": [
@@ -1179,23 +1075,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=RLEnTBG7ncQ",
     "bigPoster": "http://i3.ytimg.com/vi/RLEnTBG7ncQ/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/RLEnTBG7ncQ/hqdefault.jpg"
-  },
-  {
-    "title": "Small Town Crime",
-    "year": 2017,
-    "categories": [
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "summary": "An alcoholic ex-cop (Hawkes) finds the body of a young woman and, through an act of self-redemption, becomes hell-bent on finding the killer but unwittingly puts his family in danger and gets caught up with several dark characters along the way.",
-    "imdbId": "tt5751998",
-    "imdbRating": 6.6,
-    "runtime": 91,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=WakqZghIX_g",
-    "bigPoster": "http://i3.ytimg.com/vi/WakqZghIX_g/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/WakqZghIX_g/hqdefault.jpg"
   },
   {
     "title": "Control",
@@ -1279,24 +1158,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=KXHrCBkIxQQ",
     "bigPoster": "http://i3.ytimg.com/vi/KXHrCBkIxQQ/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/KXHrCBkIxQQ/hqdefault.jpg"
-  },
-  {
-    "title": "Chasing the Dragon",
-    "year": 2017,
-    "categories": [
-      "Action",
-      "Biography",
-      "Crime",
-      "History"
-    ],
-    "summary": "The year is 1963, an illegal immigrant named Ho (Donnie Yen) sneaks into British-ruled Hong Kong. Equipped with guts and combat skills, he plunges into the underground world getting into constant conflict with rivals. After many adversaries, the once good-natured man is physically crippled and turns into a monster more atrocious than all the most corrupted cops and ruthless drug dealers. Ho eventually emerges as the most powerful drug lord under the control of Chief Detective Sergeant, Lee Rock (Andy Lau). However, with the establishment of Independent Commission Against Corruption (ICAC) by the law enforcement in 1974, Rock is forced into premature retirement. But Ho still insists he would not be stopped as he determines to become the sole dictator of the drug empire.",
-    "imdbId": "tt6015328",
-    "imdbRating": 6.9,
-    "runtime": 128,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=Adj5dtSKF8U",
-    "bigPoster": "http://i3.ytimg.com/vi/Adj5dtSKF8U/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/Adj5dtSKF8U/hqdefault.jpg"
   },
   {
     "title": "I Kill Giants",
@@ -1659,36 +1520,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/FOxhoVx6a8o/hqdefault.jpg"
   },
   {
-    "title": "Iron Men",
-    "year": 2017,
-    "categories": [
-      "Documentary"
-    ],
-    "summary": "Behind the scenes and with the fans of West Ham United as they move to a new home after 112 years at Upton Park.",
-    "imdbId": "tt6440810",
-    "imdbRating": 7.2,
-    "runtime": 75,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=",
-    "bigPoster": "http://i3.ytimg.com/vi//maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi//hqdefault.jpg"
-  },
-  {
-    "title": "Fassbinder",
-    "year": 2015,
-    "categories": [
-      "Documentary"
-    ],
-    "summary": "A film portrait of the influential Bavarian actor, director and screenwriter who publicly confessed his homosexuality.",
-    "imdbId": "tt4536540",
-    "imdbRating": 6.6,
-    "runtime": 95,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=",
-    "bigPoster": "http://i3.ytimg.com/vi//maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi//hqdefault.jpg"
-  },
-  {
     "title": "Black Bread",
     "year": 2010,
     "categories": [
@@ -1752,23 +1583,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=89OP78l9oF0",
     "bigPoster": "http://i3.ytimg.com/vi/89OP78l9oF0/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/89OP78l9oF0/hqdefault.jpg"
-  },
-  {
-    "title": "Takeshis'",
-    "year": 2005,
-    "categories": [
-      "Comedy",
-      "Drama",
-      "Fantasy"
-    ],
-    "summary": "Beat Takeshi lives the busy and sometimes surreal life of a showbiz celebrity. One day he meets his blond lookalike named Kitano, a shy convenience store cashier, who, still an unknown actor, is waiting for his big break. After their paths cross, Kitano seems to begin hallucinating about becoming Beat.",
-    "imdbId": "tt0478044",
-    "imdbRating": 6.4,
-    "runtime": 108,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=esRWmVRGk9M",
-    "bigPoster": "http://i3.ytimg.com/vi/esRWmVRGk9M/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/esRWmVRGk9M/hqdefault.jpg"
   },
   {
     "title": "The Nile Hilton Incident",
@@ -1837,22 +1651,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=QNNcl2mEHzQ",
     "bigPoster": "http://i3.ytimg.com/vi/QNNcl2mEHzQ/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/QNNcl2mEHzQ/hqdefault.jpg"
-  },
-  {
-    "title": "Love Per Square Foot",
-    "year": 2018,
-    "categories": [
-      "Comedy",
-      "Romance"
-    ],
-    "summary": "Love Per Sq Ft, is a feature film which deals with the very common predicaments that faces today's urban youth; finding a house and finding love. Through the course of this romantic comedy we see Sanjay Chaturvedi and Karina D'souza desperately seeking a house, but realizing the difference between 'ghar' and 'makaan'.",
-    "imdbId": "tt7853242",
-    "imdbRating": 7.2,
-    "runtime": 133,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=sGIez5mIc0U",
-    "bigPoster": "http://i3.ytimg.com/vi/sGIez5mIc0U/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/sGIez5mIc0U/hqdefault.jpg"
   },
   {
     "title": "Hotel Salvation",
@@ -2437,22 +2235,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/KU3G7EEFnwQ/hqdefault.jpg"
   },
   {
-    "title": "The Great Vazquez",
-    "year": 2010,
-    "categories": [
-      "Biography",
-      "Comedy"
-    ],
-    "summary": "Is it possible to live aside of the system, thinking only about the present and oneself? A feature film about Manuel Vázquez, the best comic book author in Barcelona during the sixties, but, mainly, a man with a very particular way of living his life.",
-    "imdbId": "tt1525915",
-    "imdbRating": 6.3,
-    "runtime": 106,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=",
-    "bigPoster": "http://i3.ytimg.com/vi//maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi//hqdefault.jpg"
-  },
-  {
     "title": "The Body",
     "year": 2012,
     "categories": [
@@ -2482,22 +2264,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=Q8-oU2Fb5ro",
     "bigPoster": "http://i3.ytimg.com/vi/Q8-oU2Fb5ro/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/Q8-oU2Fb5ro/hqdefault.jpg"
-  },
-  {
-    "title": "The Square",
-    "year": 2017,
-    "categories": [
-      "Comedy",
-      "Drama"
-    ],
-    "summary": "Christian is the respected curator of a contemporary art museum, a divorced but devoted father of two who drives an electric car and supports good causes. His next show is \"The Square\", an installation which invites passersby to altruism, reminding them of their role as responsible fellow human beings. But sometimes, it is difficult to live up to your own ideals: Christian's foolish response to the theft of his phone drags him into shameful situations. Meanwhile, the museum's PR agency has created an unexpected campaign for \"The Square\". The response is overblown and sends Christian, as well as the museum, into an existential crisis.",
-    "imdbId": "tt4995790",
-    "imdbRating": 7.4,
-    "runtime": 151,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=zKDPrpJEGBY",
-    "bigPoster": "http://i3.ytimg.com/vi/zKDPrpJEGBY/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/zKDPrpJEGBY/hqdefault.jpg"
   },
   {
     "title": "Forgotten",
@@ -2773,24 +2539,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/dlxGMOJ0jK0/hqdefault.jpg"
   },
   {
-    "title": "The Battleship Island",
-    "year": 2017,
-    "categories": [
-      "Action",
-      "Drama",
-      "History",
-      "War"
-    ],
-    "summary": "During the Japanese colonial era, roughly 400 Korean people, who were forced onto Battleship Island (\"Hashima Island\") to mine for coal, attempt to a dramatic escape.",
-    "imdbId": "tt5969696",
-    "imdbRating": 7.2,
-    "runtime": 132,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=GmA2YIWRF0M",
-    "bigPoster": "http://i3.ytimg.com/vi/GmA2YIWRF0M/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/GmA2YIWRF0M/hqdefault.jpg"
-  },
-  {
     "title": "The Death of Stalin",
     "year": 2017,
     "categories": [
@@ -3048,24 +2796,6 @@ var normalizedMovies = [
     "smallPoster": "http://i3.ytimg.com/vi/lxtWMOAHoiI/hqdefault.jpg"
   },
   {
-    "title": "Your Name",
-    "year": 2016,
-    "categories": [
-      "Animation",
-      "Drama",
-      "Fantasy",
-      "Romance"
-    ],
-    "summary": "Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.",
-    "imdbId": "tt5311514",
-    "imdbRating": 8.4,
-    "runtime": 106,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=VgixlvX28-g",
-    "bigPoster": "http://i3.ytimg.com/vi/VgixlvX28-g/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/VgixlvX28-g/hqdefault.jpg"
-  },
-  {
     "title": "Dawson City: Frozen Time",
     "year": 2016,
     "categories": [
@@ -3178,39 +2908,6 @@ var normalizedMovies = [
     "trailer": "https://youtube.com/watch?v=YheC-4Qgoro",
     "bigPoster": "http://i3.ytimg.com/vi/YheC-4Qgoro/maxresdefault.jpg",
     "smallPoster": "http://i3.ytimg.com/vi/YheC-4Qgoro/hqdefault.jpg"
-  },
-  {
-    "title": "Mudbound",
-    "year": 2017,
-    "categories": [
-      "Drama",
-      "War"
-    ],
-    "summary": "In the aftermath of WWII, somewhere in the muddy Mississippi Delta, two families--one black, the Jacksons, and the other white, the McAllans--are forced to share the same patch of land, keeping a frail race-based peace with each other. However, as they both struggle with hardship and dire poverty, the long-awaited return of two war veterans--Ronsel, the Jacksons' eldest son, and Jamie, Henry McAllan's younger brother--will unexpectedly nurture a budding friendship that transcends prejudice and race. But, in the end, against a backdrop of fevered Mississippi sunsets and vitriolic racism, life can be hard when the law of the land is still segregation and hatred. And then, no one can be safe.",
-    "imdbId": "tt2396589",
-    "imdbRating": 7.5,
-    "runtime": 134,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=xucHiOAa8Rs",
-    "bigPoster": "http://i3.ytimg.com/vi/xucHiOAa8Rs/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/xucHiOAa8Rs/hqdefault.jpg"
-  },
-  {
-    "title": "Final Portrait",
-    "year": 2017,
-    "categories": [
-      "Biography",
-      "Comedy",
-      "Drama"
-    ],
-    "summary": "In 1964, while on a short trip to Paris, the American writer and art-lover James Lord (Armie Hammer) is asked by his friend, the world-renowned artist Alberto Giacometti (Geoffrey Rush), to sit for a portrait. The process, Giacometti assures Lord, will take only a few days. Flattered and intrigued, Lord agrees. So begins not only the story of an offbeat friendship, but, seen through the eyes of Lord, an insight into the beauty, frustration, profundity and, at times, downright chaos of the artistic process. FINAL PORTRAIT is a portrait of a genius, and of a friendship between two men who are utterly different, yet increasingly bonded through a single, ever-evolving act of creativity. It is a film which shines a light on the artistic process itself, by turns exhilarating, exasperating and bewildering, questioning whether the gift of a great artist is a blessing or a curse.",
-    "imdbId": "tt4494718",
-    "imdbRating": 6.3,
-    "runtime": 90,
-    "language": "English",
-    "trailer": "https://youtube.com/watch?v=PWkS1gO3aNI",
-    "bigPoster": "http://i3.ytimg.com/vi/PWkS1gO3aNI/maxresdefault.jpg",
-    "smallPoster": "http://i3.ytimg.com/vi/PWkS1gO3aNI/hqdefault.jpg"
   },
   {
     "title": "My Life as a Zucchini",
