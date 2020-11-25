@@ -64,89 +64,78 @@ var renderMovies = function (searchResult, searchRegex) {
 };
 
 
-
-
-
-
-
-
-var searchMovie = function () {
-  var searchWord = elSearchInput.value.trim();
-  var searchRegex = new RegExp(searchWord, 'gi');
-  var newResult = [];
-
-  var createMoviesBySearch = normalizedMovies.filter(function (movie) {
-    var result = movie.title.match(searchRegex);
-    
-    if (result) {
-      newResult.push(movie);
+var sortObjectsAZ = function (array) {
+  return array.sort(function (a, b) {
+    if (a.title > b.title) {
+      return 1;
+    } else if (a.title < b.title) {
+      return -1;
     }
+    return 0;
   });
+};
 
-  renderMovies(newResult);
+var sortObjectsRating = function (array) {
+  return array.sort(function (a, b) {
+    if (a.imdbRating > b.imdbRating) {
+      return -1;
+    } else if (a.imdbRating < b.imdbRating) {
+      return 1;
+    }
+    return 0;
+  });
 }
 
-
-elCategoriesSelect.addEventListener('change', function () {
-  var categoryMovie = [];
-  categoryMovie = normalizedMovies.filter(function (movie) {
-    if (elCategoriesSelect.value === 'All') {
-      return movie;
-    };
-  
-    var film = movie.categories.includes(elCategoriesSelect.value);
-    return film;
+var sortObjectsYear = function (array) {
+  return array.sort(function (a, b) {
+    if (a.year > b.year) {
+      return -1;
+    } else if (a.year < b.year) {
+      return 1;
+    }
+    return 0;
   });
-  
-  renderMovies(categoryMovie);
-});
+}
 
-
-var normalizedMoviesCopy = normalizedMovies.slice();
-elSortSelect.addEventListener('change', function () {
-  if (elSortSelect.value === 'az') {
-    normalizedMoviesCopy.sort(function (a, b) {
-      var atitle = a.title, btitle = b.title;
-      if (atitle < btitle) {
-        return -1;
-      };
-      return 0;
-    });
-    renderMovies(normalizedMoviesCopy);
+var sortSearchResults = function (results, sortType) {
+  // TODO - create sorting function that accepts array of objects and sorting property
+  if (sortType === 'az') {
+    return sortObjectsAZ(results);
+  } else if (sortType === 'za') {
+    return sortObjectsAZ(results).reverse();
+  } else if (sortType === 'rating_desc') {
+    return sortObjectsRating(results)
+  } else if (sortType === 'rating_asc') {
+    return sortObjectsRating(results).reverse();
+  } else if (sortType === 'year_desc') {
+    return sortObjectsYear(results)
+  } else if (sortType === 'year_asc') {
+    return sortObjectsYear(results).reverse();
   }
+};
 
-  if (elSortSelect.value === 'za') {
-    normalizedMoviesCopy.sort(function (a, b) {
-      var atitle = a.title, btitle = b.title;
-      if (atitle > btitle) {
-        return -1;
-      };
-      return 0;
-    });
-    renderMovies(normalizedMoviesCopy);
-  }
 
-  if (elSortSelect.value === 'rating_asc') {
-    normalizedMoviesCopy.sort(function (a, b) {
-      return a.imdbRating - b.imdbRating;
-    });
-    renderMovies(normalizedMoviesCopy);
-  }
+var findMovies = function (title, minRating, genre) {
+  return normalizedMovies.filter((movie) => {
+    var doesMatchCategory = genre === 'All' || movie.categories.includes(genre);
 
-  if (elSortSelect.value === 'rating_desc') {
-    normalizedMoviesCopy.sort(function (a, b) {
-      return b.imdbRating - a.imdbRating;
-    });
-    renderMovies(normalizedMoviesCopy);
-  }
+    return movie.title.match(title) && movie.imdbRating >= minRating && doesMatchCategory;
+  });
+};
 
-  return 0;
 
-  renderMovies(normalizedMoviesCopy);
-})
-elSearchForm.addEventListener('submit', function (evt) {
+// Arrow function
+elSearchForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-})
-elSearchInput.addEventListener('input', searchMovie);
-elSearchButton.addEventListener('submit', searchMovie);
-// elCategoriesSelect.addEventListener('change', categoryMovie);
+
+  var searchTitle = elSearchInput.value.trim();
+  var movieTitleRegex = new RegExp(searchTitle, 'gi');
+  // var minimumRating = Number(elSearchRatingInput.value);
+  var genre = elCategoriesSelect.value;
+  var sorting = elSortSelect.value;
+
+  var searchResults = findMovies(movieTitleRegex, /* minimumRating, */ genre);
+  var test = sortSearchResults(searchResults, sorting);
+
+  renderMovies(searchResults, movieTitleRegex);
+});
