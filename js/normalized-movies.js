@@ -2917,7 +2917,7 @@ var normalizedMovies = [
       "Comedy",
       "Drama"
     ],
-    "summary": "Courgette (Zucchini) is an intriguing nickname for a 9-year-old boy. Although his unique story is surprisingly universal. After his mother's disappearance, Courgette is befriended by a police officer Raymond, who accompanies him to his new foster home filled with other orphans his age. At first he struggles to find his place in this strange, at times, hostile environment. Yet with Raymond's help and his new-found friends, Courgette eventually learns to trust and might find true love.",
+    "summary": "Courgette (Zucchini) is an intriguing nickname for a 9-year-old boy. Although his unique story is surprisingly universal. After his mother's disappearance, Courgette is befriended by a police officer Raymond, who accompanies him to his new foster home filled with other orphans his age. At first he struggles to find his place in this strange, at times, hostile environment.",
     "imdbId": "tt2321405",
     "imdbRating": 7.8,
     "runtime": 66,

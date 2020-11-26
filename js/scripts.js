@@ -55,6 +55,7 @@ var renderMovies = function (searchResults, searchRegex) {
 
     $_('.movie__categories', elMovie).textContent = movie.categories.join(', ');
     $_('.movie__rating', elMovie).textContent = movie.imdbRating;
+    $_('.movie__year', elMovie).textContent = movie.year;
 
     elMoviesWrapperFragment.appendChild(elMovie);
   });

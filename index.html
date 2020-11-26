@@ -30,7 +30,7 @@
             <option value="year_desc">Year (New to Old)</option>
           </select>
 
-          <button class="search-button btn bg-danger text-white" type="submit">Search</button>
+          <button class="search-button btn bg-danger text-white w-25" type="submit">Search</button>
         
       </form>
     </header>
@@ -47,13 +47,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Bu qism tezkunda tayyor bo'ladi :)</h5>
+          <h5 class="modal-title h4 font-weight-bold" id="exampleModalLabel">Kino nomi</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
+          
         </div>
       </div>
     </div>
@@ -64,11 +64,12 @@
       <img class="movie__img mb-2" src="" alt="movies img" width="220" height="150px">
       <h2 class="movie__title m-0 h5 font-weight-bold text-center"></h2>
       <p class="movie__categories text-center m-0 font-italic"></p>
-      <div class="d-flex align-items-center justify-content-center mb-3">
+      <p class="movie__year mb-0 text-center font-weight-bold text-success mt-auto">2019</p>
+      <div class="d-flex align-items-center justify-content-center mb-2">
         <span class="star">&starf;</span>
         <span class="movie__rating font-weight-bold"></span>
       </div>
-      <button class="movie__btn btn bg-danger mt-auto d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
+      <button class="movie__btn btn bg-danger d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
     </li>
   </template>
 
