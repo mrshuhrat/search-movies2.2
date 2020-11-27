@@ -45,18 +45,67 @@ h1 {
 
 .movies {
   overflow: auto;
-  margin-right: -30px;
+  margin-right: -25px;
   height: 430px;
 }
 
 .movie {
-  max-width: 240px;
+  max-width: 235px;
+  padding: 10px;
   margin-right: 33px;
   border-radius: 5px;
+  transition: background-color 0.4s ease;
+}
+
+.trailer__link {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .movie__img {
   display: block;
+}
+
+.trailer__link::before {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "Trailer";
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.movie:hover .trailer__link::before{
+  display: flex;
+}
+
+.movie__title {
+  margin: 0;
+  margin-bottom: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.movie__categories {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-style: italic;
 }
 
 .star {
