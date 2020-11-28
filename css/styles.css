@@ -46,7 +46,7 @@ h1 {
 .movies {
   overflow: auto;
   margin-right: -25px;
-  height: 430px;
+  height: 440px;
 }
 
 .movie {
@@ -86,7 +86,7 @@ h1 {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .movie:hover .trailer__link::before{
@@ -112,6 +112,7 @@ h1 {
   color: #dc3545;
   font-size: 24px;
 }
+
 
 /* width */
 ::-webkit-scrollbar {

@@ -14,7 +14,7 @@
     <header class="site-header">
       <h1 class="text-center mb-4">Best Movies</h1>
 
-      <form class="search-form mb-4" action="https://echo.html.ru" method="GET" autocomplete="off">
+      <form class="search-form mb-2" action="https://echo.html.ru" method="GET" autocomplete="off">
           <input class="search-input form-control" type="search" name="search" id="movies-search" placeholder="Search...">
           
           <select class="catigories-select form-control w-25" name="select" id="categories-select">
@@ -33,27 +33,61 @@
           <button class="search-button btn bg-danger text-white w-25" type="submit">Search</button>
         
       </form>
+      <div>
+        <p>
+          <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            &#9829; Bookmarks
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+      </div>
     </header>
     <hr>
 
     <main class="">
-      <ul class="movies p-3 d-flex flex-wrap  list-unstyled">
+      <ul class="movies p-3 pt-0 d-flex flex-wrap  list-unstyled">
         
       </ul>
     </main>
   </div>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title h4 font-weight-bold" id="exampleModalLabel">Kino nomi</h5>
+          <h5 class="font-weight-bold h4">About Movie</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          
+          <img class="modal-img movie__img mx-auto" src="" alt="movies img" width="320" height="150px">
+          <h5 class="modal-title font-weight-bold text-center mt-2" id="exampleModalLabel">Kino nomi</h5>
+
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold">Genre:</span>
+            <span class="movie-modal-genre font-italic"></span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold">Year:</span>
+            <span class="movie-modal-year"></span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold">Language:</span>
+            <span class="movie-modal-language"></span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="font-weight-bold">Runtime:</span>
+            <span class="movie-modal-runtime"></span>
+          </div>
+          <div class="">
+            <span class="font-weight-bold">Summary:</span>
+            <span class="movie-modal-summary"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +105,8 @@
         <span class="star">&starf;</span>
         <span class="movie__rating font-weight-bold"></span>
       </div>
-      <button class="movie__btn btn bg-danger d-flex justify-content-center text-white" data-toggle="modal" data-target="#exampleModal">See More</button>
+      <button class="movie__btn btn bg-danger d-flex justify-content-center text-white mb-2 js-modal-btn" data-toggle="modal" data-target="#exampleModal">See More</button>
+      <button class="bookmark-btn btn btn-outline-danger font-weight-bold">&#9829; Bookmark</button>
     </li>
   </template>
 

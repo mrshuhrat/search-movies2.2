@@ -45,6 +45,7 @@ var renderMovies = function (searchResults, searchRegex) {
   searchResults.forEach(function (movie) {
     var elMovie = elMoviesTemplate.cloneNode(true);
 
+    $_('.movie', elMovie).dataset.imdbId = movie.imdbId;
     $_('.movie__img', elMovie).src = movie.smallPoster;
 
     if (searchRegex.source === '(?:)') {
@@ -150,3 +151,22 @@ var searchResults = findMovies(movieTitleRegex, genre);
 var test = sortSearchResults(searchResults, sorting);
 console.log(test);
 renderMovies(searchResults, movieTitleRegex);
+
+
+elMoviesWrapper.addEventListener('click', function (evt) {
+  if (evt.target.matches('.js-modal-btn')) {
+    var movieImdbId = evt.target.closest('.movie').dataset.imdbId;
+
+    var foundMovie = normalizedMovies.find(function (movie) {
+      return movie.imdbId === movieImdbId;
+    });
+
+    $_('.modal-title').textContent = foundMovie.title;
+    $_('.modal-img').src = foundMovie.smallPoster;
+    $_('.movie-modal-genre').textContent = foundMovie.categories;
+    $_('.movie-modal-year').textContent = foundMovie.year;
+    $_('.movie-modal-language').textContent = foundMovie.language;
+    $_('.movie-modal-runtime').textContent = `${foundMovie.runtime} min`;
+    $_('.movie-modal-summary').textContent = foundMovie.summary;
+  };
+});
