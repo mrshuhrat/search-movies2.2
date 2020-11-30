@@ -1,4 +1,5 @@
 var normalizedMovies = normalizedMovies.slice(0, 200);
+var bookmarkedMovies = [];
 
 var elSearchForm = $_('.search-form');
 var elSearchInput = $_('.search-input', elSearchForm);
@@ -6,8 +7,10 @@ var elCategoriesSelect = $_('.catigories-select', elSearchForm);
 var elSortSelect = $_('.sort-selct', elSearchForm);
 
 var elMoviesWrapper = $_('.movies');
+var elBookmarkedMovies = $_('.bokmarks-wrapper');
 
 var elMoviesTemplate = $_('#movie_template').content;
+var elBookmarkedMovieTemplate = $_('#bookmarked-movie-template').content;
 
 var getCategories = function() {
   var categories = [];
@@ -152,21 +155,89 @@ var test = sortSearchResults(searchResults, sorting);
 console.log(test);
 renderMovies(searchResults, movieTitleRegex);
 
+var updateMovieModalContent = function (movie) {
+  $_('.modal-title').textContent = movie.title;
+  $_('.modal-img').src = movie.smallPoster;
+  $_('.movie-modal-genre').textContent = movie.categories;
+  $_('.movie-modal-year').textContent = movie.year;
+  $_('.movie-modal-language').textContent = movie.language;
+  $_('.movie-modal-runtime').textContent = `${movie.runtime} min`;
+  $_('.movie-modal-summary').textContent = movie.summary;
+}
+
+
+var showMovieModal = function (eventTarget) {
+  var movieImdbId = eventTarget.closest('.movie').dataset.imdbId;
+
+  var foundMovie = normalizedMovies.find(function (movie) {
+    return movie.imdbId === movieImdbId;
+  });
+
+  updateMovieModalContent(foundMovie)
+}
+
+
+var renderBookmarkedMovies = function () {
+  elBookmarkedMovies.innerHTML = '';
+
+  var elBookmarkedMoviesFragment = document.createDocumentFragment();
+
+  bookmarkedMovies.forEach(function (movie) {
+    var elBookmarkedMovie = elBookmarkedMovieTemplate.cloneNode(true);
+    
+    $_('.bookmarked-movie__title', elBookmarkedMovie).textContent = movie.title;
+    $_('.js-remove-bookmarked-movie-button', elBookmarkedMovie).dataset.imdbId = movie.imdbId;
+
+    elBookmarkedMoviesFragment.appendChild(elBookmarkedMovie);
+  });
+
+  elBookmarkedMovies.appendChild(elBookmarkedMoviesFragment);
+};
+
+var bookmarkMovie = function (movie) {
+
+  bookmarkedMovies.push(movie);
+
+  renderBookmarkedMovies();
+};
 
 elMoviesWrapper.addEventListener('click', function (evt) {
   if (evt.target.matches('.js-modal-btn')) {
+    showMovieModal(evt.target);
+  } else if (evt.target.matches('.js-movie-bookmark')) {
+  
     var movieImdbId = evt.target.closest('.movie').dataset.imdbId;
 
-    var foundMovie = normalizedMovies.find(function (movie) {
+    let foundMovie = normalizedMovies.find(function (movie) {
+      return movie.imdbId === movieImdbId
+    });
+
+    // var isBookmarked = bookmarkedMovies.find(function (movie) {
+    //   return movie.imdbId === foundMovie.imdbId;
+    // });
+
+    // if (!isBookmarked) {
+    //   bookmarkMovie(foundMovie);
+    // }
+
+    bookmarkMovie(foundMovie);
+
+  }
+});
+
+elBookmarkedMovies.addEventListener('click', (evt) => {
+  if (evt.target.matches('.js-remove-bookmarked-movie-button')) {
+    var movieImdbId = evt.target.dataset.imdbId;
+
+    // var kinoIndeksi;
+    var kinoIndeksi = bookmarkedMovies.findIndex(function (movie) {
       return movie.imdbId === movieImdbId;
     });
 
-    $_('.modal-title').textContent = foundMovie.title;
-    $_('.modal-img').src = foundMovie.smallPoster;
-    $_('.movie-modal-genre').textContent = foundMovie.categories;
-    $_('.movie-modal-year').textContent = foundMovie.year;
-    $_('.movie-modal-language').textContent = foundMovie.language;
-    $_('.movie-modal-runtime').textContent = `${foundMovie.runtime} min`;
-    $_('.movie-modal-summary').textContent = foundMovie.summary;
-  };
+    // var kinoIndeksi = bookmarkedMovies.indexOf(kino);
+
+    bookmarkedMovies.splice(kinoIndeksi, 1);
+
+    renderBookmarkedMovies();
+  }
 });

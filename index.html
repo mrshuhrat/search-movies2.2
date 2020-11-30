@@ -40,9 +40,7 @@
           </button>
         </p>
         <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
+          <div class="bokmarks-wrapper card card-body"></div>
         </div>
       </div>
     </header>
@@ -106,7 +104,15 @@
         <span class="movie__rating font-weight-bold"></span>
       </div>
       <button class="movie__btn btn bg-danger d-flex justify-content-center text-white mb-2 js-modal-btn" data-toggle="modal" data-target="#exampleModal">See More</button>
-      <button class="bookmark-btn btn btn-outline-danger font-weight-bold">&#9829; Bookmark</button>
+      <button class="bookmark-btn btn btn-outline-danger font-weight-bold js-movie-bookmark">&#9829; Bookmark</button>
+    </li>
+  </template>
+
+  <!-- Bookmarked movie template -->
+  <template id="bookmarked-movie-template">
+    <li class="bookmarked-movie list-group-item">
+      <h3 class="bookmarked-movie__title h6"></h3>
+      <button class="btn btn-sm btn-danger js-remove-bookmarked-movie-button">Remove</button>
     </li>
   </template>
 
